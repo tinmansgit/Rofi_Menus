@@ -20,7 +20,7 @@ FILE11="$HOME/bin/rofi/motivation.sh"
 FILE99="$HOME/bin/MyHotKeys.txt"
 FILE_LAST="$HOME/bin/rofi/my_configs.sh"
 
-# Create an array of options
+# Menu list
 options=(
 	"|-- crontab"
     "|-- .bashrc"
@@ -48,7 +48,7 @@ options=(
 	"|-- <<<"
 )
 
-# Use rofi to display the options
+# Use rofi to display the menu
 selected=$(printf '%s\n' "${options[@]}" | rofi -theme-str 'window {width: 600;}' -dmenu -l 26 -p "Select file to edit")
 
 # Open the selected file with vi
