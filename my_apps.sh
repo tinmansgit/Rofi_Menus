@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-# Define terminal, no border, size and location, run vi on selected file
+# Set terminal, no border, size and location, run vi on selected file
 VIEDIT="/usr/bin/terminator -b --geometry=1100x800+400+150 -x vi"
 
-# Define the file paths
+# Define the file path for editing this script in place
 FILE_LAST="$HOME/bin/rofi/my_apps.sh"
 
-# Set $TRM
+# Set terminal $TRM
 TRM="terminator -b --geometry=1200x600+400+200"
 
-# Create an array of options
+# Menu list
 options=(
 	"|-- BrowseMe"
 	"|-- Configs"
