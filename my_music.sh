@@ -9,7 +9,7 @@ FILE_LAST="$HOME/bin/rofi/my_music.sh"
 # Set $TRM
 TRM="terminator --geometry=975x600+500+200"
 
-# Create an array of options
+# Menu list
 options=(
 	"|-- Music Manager"
 	"|-- Musikcube"
@@ -20,7 +20,7 @@ options=(
     "|-- <<<"
 )
 
-# Use rofi to display the options
+# Use rofi to display the menu
 selected=$(printf '%s\n' "${options[@]}" | rofi -theme-str 'window {width: 600;}' -dmenu -l 8 -p "$(date)")
 
 if [[ "$selected" == "|-- Tunz" ]]; then
