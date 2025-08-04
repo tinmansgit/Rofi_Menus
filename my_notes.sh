@@ -9,7 +9,7 @@ FILE_LAST="$HOME/bin/rofi/my_notes.sh"
 # Set $TRM
 TRM="terminator --geometry=1200x600+400+200"
 
-# Create an array of options
+# Menu
 options=(
 	"|-- Note"
 	"|-- Edit Note"
@@ -19,7 +19,7 @@ options=(
     "|-- <<<"
 )
 
-# Use rofi to display the options
+# Use rofi to display the menu
 selected=$(printf '%s\n' "${options[@]}" | rofi -theme-str 'window {width: 600;}' -dmenu -l 8 -p "$(date)")
 
 if [[ "$selected" == "|-- Note" ]]; then
