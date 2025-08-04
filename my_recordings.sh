@@ -6,7 +6,7 @@ VIEDIT="/usr/bin/terminator -b --geometry=1100x800+400+150 -x vi"
 # Define the file paths
 FILE_LAST="$HOME/bin/rofi/my_recordings.sh"
 
-# Create an array of options
+# Menu
 options=(
 	"|-- Load Rack"
 	"|-- Audio Note"
@@ -18,7 +18,7 @@ options=(
     "|-- <<<"
 )
 
-# Use rofi to display the options
+# Use rofi to display the menu
 selected=$(printf '%s\n' "${options[@]}" | rofi -theme-str 'window {width: 600;}' -dmenu -l 8 -p "Choose A/V Recording Script")
 
 if [[ "$selected" == "|-- Load Rack" ]]; then
